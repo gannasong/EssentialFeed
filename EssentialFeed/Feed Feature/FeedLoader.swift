@@ -12,9 +12,6 @@ public enum LoadFeedResult<Error: Swift.Error> {
   case failure(Error)
 }
 
-// 當 Error 有服從 Equatable 時，才可以使用 extensio LoadFeedResult methods
-extension LoadFeedResult: Equatable where Error: Equatable {}
-
 protocol FeedLoader {
   associatedtype Error: Swift.Error
 
